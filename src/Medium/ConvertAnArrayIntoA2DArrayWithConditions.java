@@ -30,12 +30,4 @@ public class ConvertAnArrayIntoA2DArrayWithConditions {
 
         return resultList;
     }
-
-
-    public static void main(String[] args) {
-        int[] nums = {1,3,4,1,2,3,1};
-        List<List<Integer>> result = findMatrix(nums);
-        System.out.println(result);
-    }
-
 }
