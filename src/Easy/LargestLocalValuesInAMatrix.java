@@ -1,6 +1,4 @@
-package Medium;
-
-import java.util.Arrays;
+package Easy;
 
 public class LargestLocalValuesInAMatrix {
 
