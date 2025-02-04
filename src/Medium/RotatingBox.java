@@ -1,6 +1,6 @@
 package Medium;
 
-public class RotatingTheBox {
+public class RotatingBox {
 
     public char[][] rotateTheBox(char[][] boxGrid) {
         for(int i = 0; i < boxGrid.length; i++) {
@@ -38,3 +38,4 @@ public class RotatingTheBox {
     }
 
 }
+
