@@ -33,10 +33,4 @@ public class DIStringMatch {
         return result;
     }
 
-
-    public static void main(String[] args) {
-        int[] res = diStringMatch("IDID");
-        System.out.println(res.toString());
-    }
-
 }
