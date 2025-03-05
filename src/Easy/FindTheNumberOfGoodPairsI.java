@@ -1,8 +1,5 @@
 package Easy;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class FindTheNumberOfGoodPairsI {
 
     public static int numberOfPairs(int[] nums1, int[] nums2, int k) {
