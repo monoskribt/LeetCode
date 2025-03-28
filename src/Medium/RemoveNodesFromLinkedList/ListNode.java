@@ -59,21 +59,17 @@ public class ListNode {
 
 
     public static void main(String[] args) {
-        // Создаём связанный список: 5 -> 2 -> 13 -> 3 -> 8
         ListNode head = new ListNode(5);
         head.next = new ListNode(2);
         head.next.next = new ListNode(13);
         head.next.next.next = new ListNode(3);
         head.next.next.next.next = new ListNode(8);
 
-        // Вызываем метод removeNodes
         ListNode result = removeNodes(head);
 
-        // Выводим результат
         printList(result);
     }
 
-    // Метод для вывода связанного списка
     public static void printList(ListNode head) {
         ListNode temp = head;
         while (temp != null) {
