@@ -6,10 +6,10 @@ public class AntOnTheBoundary {
 
 
         int sum = 0;
-        for(int i = 0; i < nums.length; i++) {
-            sum += nums[i];
+        for (int num : nums) {
+            sum += num;
 
-            if(sum == 0) {
+            if (sum == 0) {
                 countOfStartPosition++;
             }
         }
