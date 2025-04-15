@@ -2,6 +2,7 @@ package Easy;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Queue;
 
 class TreeNode {
     int val;
@@ -23,12 +24,24 @@ public class InvertBinaryTree {
             return null;
         }
 
-        TreeNode temp = root.left;
-        root.left = root.right;
-        root.right = temp;
+        Queue<TreeNode> tempQueue = new LinkedList<>();
+        tempQueue.add(root);
 
-        invertTree(root.left);
-        invertTree(root.right);
+        while (!tempQueue.isEmpty()) {
+            TreeNode tempTreeFromQueue = tempQueue.poll();
+
+            TreeNode temp = tempTreeFromQueue.left;
+            tempTreeFromQueue.left = tempTreeFromQueue.right;
+            tempTreeFromQueue.right = temp;
+
+            if(tempTreeFromQueue.left != null) {
+                tempQueue.add(tempTreeFromQueue.left);
+            }
+
+            if(tempTreeFromQueue.right != null) {
+                tempQueue.add(tempTreeFromQueue.right);
+            }
+        }
 
         return root;
     }
