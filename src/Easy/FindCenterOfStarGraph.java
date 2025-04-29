@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FindCenterOfStarGraph {
-    private Map<Integer, Integer> map = new HashMap<>();
+    private final Map<Integer, Integer> map = new HashMap<>();
 
     public int findCenter(int[][] edges) {
         for (int[] edge : edges) {
