@@ -26,17 +26,4 @@ public class AllPathsFromSourceToTarget {
             current.removeLast();
         }
     }
-
-    public static void main(String[] args) {
-        int[][] graph = {
-                {4, 3, 1},
-                {3, 2, 4},
-                {3},
-                {4},
-                {}
-        };
-
-        List<List<Integer>> test = allPathsSourceTarget(graph);
-        System.out.println(test);
-    }
 }
