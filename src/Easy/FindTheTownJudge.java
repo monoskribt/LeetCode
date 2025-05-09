@@ -21,8 +21,4 @@ public class FindTheTownJudge {
 
         return -1;
     }
-
-    private void dfs(int start, int[][] graph) {
-        if(start == null)
-    }
 }
