@@ -4,26 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTreePaths {
+    private final List<String> list = new ArrayList<>();
 
     public List<String> binaryTreePaths(TreeNode root) {
-        List<String> list = new ArrayList<>();
-        String path = "";
-        helperMethod(root, path, list);
+        someOrder(root, new StringBuilder());
         return list;
     }
 
-    private void helperMethod(TreeNode node, String path, List<String> listPath) {
+    private void someOrder(TreeNode node, StringBuilder sb) {
         if(node != null) {
-            path += node.val;
+            sb.append(node.val);
 
             if(node.left == null && node.right == null) {
-                listPath.add(path);
+                list.add(sb.toString());
             }
             else {
-                helperMethod(node.left, path + "->", listPath);
-                helperMethod(node.right, path + "->", listPath);
+                someOrder(node.left, sb.append("->"));
+                someOrder(node.right, sb.append("->"));
             }
         }
     }
+
+
 
 }
